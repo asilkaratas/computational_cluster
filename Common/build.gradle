@@ -1,0 +1,33 @@
+buildscript {
+  repositories {
+    jcenter()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath 'com.github.jacobono:gradle-jaxb-plugin:1.3.5'
+  }
+}
+
+apply plugin: 'com.github.jacobono.jaxb'
+
+dependencies { 
+	compile project(':TaskSolvers')
+	jaxb 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41' //jaxws 2.2.6 uses jaxb 2.2.5, but can't dL 2.2.5 from maven the pom is off TODO
+	jaxb 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
+  	jaxb 'javax.xml.bind:jaxb-api:2.2.7'
+  	
+  	compile 'javax.xml.bind:jaxb-api:2.2.7'
+  	compile 'com.sun.xml.bind:jaxb-impl:2.2.7-b41'
+  	compile 'com.sun.xml.bind:jaxb-xjc:2.2.7-b41'
+  	compile 'commons-cli:commons-cli:1.3'
+}
+
+jaxb { 
+  
+  xjc {
+     xsdDir = "Common/resources/schema"
+     episodesDir = "Common/resources/episodes"
+     generatePackage = "com.computationalcluster.common.messages" 
+   }
+}

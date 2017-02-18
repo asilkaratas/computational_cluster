@@ -1,0 +1,11 @@
+apply plugin: 'application'
+
+mainClassName = "com.computationalcluster.computationalclient.Main"
+
+dependencies {
+    compile project(':Common')
+}
+
+run {
+	args '127.0.0.1', '4444'
+}

@@ -1,0 +1,7 @@
+apply plugin: 'application'
+
+mainClassName = "com.computationalcluster.computationalnode.Main"
+
+dependencies {
+    compile project(':Common')
+}

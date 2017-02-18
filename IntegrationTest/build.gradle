@@ -1,0 +1,7 @@
+dependencies {
+    compile project(':Common')
+    compile project(':CommunicationServer')
+    compile project(':ComputationalClient')
+    compile project(':TaskManager')
+    compile project(':ComputationalNode')
+}

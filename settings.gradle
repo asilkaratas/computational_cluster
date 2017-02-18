@@ -1,0 +1,9 @@
+include 'Common'
+include 'ComputationalNode'
+include 'ComputationalClient'
+include 'CommunicationServer'
+include 'TaskManager'
+include 'TaskSolvers'
+include 'IntegrationTest'
+
+rootProject.name = 'computational_cluster'

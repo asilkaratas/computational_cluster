@@ -1,0 +1,5 @@
+
+
+dependencies {
+    compile files('lib/TaskSolver.jar')
+}

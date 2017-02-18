@@ -1,0 +1,7 @@
+apply plugin: 'application'
+
+mainClassName = "com.computationalcluster.taskmanager.Main"
+
+dependencies {
+    compile project(':Common')
+}
